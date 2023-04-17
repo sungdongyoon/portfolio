@@ -2,6 +2,8 @@
   width: 100vw;
   height: 100vh;
   color: #000;
+  /* background: url('/img/배경화면.jpg') no-repeat;
+  background-size: cover; */
 }
 .project_body {
   width: 80vw;
@@ -36,15 +38,20 @@
 .project_one_left {
   width: 600px;
   height: 400px;
-  margin-right: 20px;
+  margin-right: 100px;
   background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rebeccapurple;
 }
-.arrow {
-  border: 1px solid red;
+.arrow_one {
+  font-size: 4rem;
+}
+#left_one {
+transform: translateX(-50px);
+}
+#right_one {
+  transform: translateX(50px);
 }
 .project_one_left img {
   width: 600px;
