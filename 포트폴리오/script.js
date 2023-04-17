@@ -10,3 +10,28 @@ $(function() {
     }
   });
 });
+
+/* Project slider */
+const projectOne = document.querySelector(".project_one_left");
+const images = ["반응형1-1.png", "반응형1-2.png", "반응형1-3.png", "반응형1-4.png", "반응형1-5.png", "반응형1-6.png"];
+const arrows = document.querySelectorAll(".arrow");
+
+projectOne.style.backgroundImage = `url(/img/${images[0]})`;
+
+let i = 0;
+arrows.forEach(function(e) {
+  e.addEventListener("click", (e) => {
+    if(e.target.id === "left") {
+      i--;
+      if(i < 0) {
+        i = images.length - 1;
+      }
+    } else if(e.target.id === "right") {
+      i++;
+      if(i >= images.length) {
+        i = 0;
+      }
+    }
+    projectOne.style.backgroundImage = `url(/img/${images[i]})`;
+  });
+});
