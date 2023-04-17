@@ -1,0 +1,132 @@
+/* About wrap */ 
+.about_wrap {
+  width: 100vw;
+  height: 90vh;
+  color: #000;
+}
+
+/* body */
+.about_body {
+  width: 80%;
+  height: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about_box {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content */
+.about_content {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  letter-spacing: 2px;
+  border: 2px solid blue;
+  padding-top: 70px;
+}
+.about_content_profile {
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  background-color: #999;
+  border-radius: 20px;
+}
+.profile_wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 3px solid red;
+}
+.profile_pic {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: aqua;
+  border-radius: 50%;
+}
+.profile_pic img {
+  border-radius: 50%;
+  margin-top: 50px;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  position: absolute;
+}
+.profile_title {
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  color: #000;
+}
+.profile_title h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.profile_title h3 {
+  font-size: 1.2rem;
+}
+.about_content_intro {
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  border: 1px solid green;
+}
+.intro_wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid red; */
+}
+.intro_can {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.intro_can h1 {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #fff;
+  text-align: center;
+
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 60px;
+  border: 1px solid #999;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+.intro_img {
+  display: flex;
+  align-items: center;
+}
+.intro_img_cover {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.intro_img img {
+  width: 60px;
+  height: 60px;
+  margin: 20px; 
+}

@@ -1,0 +1,65 @@
+/* Header */
+.common_header {
+  height: 10%;
+  background-color: transparent;
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+.common_header.header_eft {
+  background-color: #fff;
+}
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.header_logo a {
+  font-size: 1.5rem;
+  font-weight: bold ;
+  color: #000;
+}
+.header_logo strong {
+  font-size: 2em;
+}
+.header_logo span {
+  transition: 0.5s;
+}
+.header_logo span.logo_eft {
+  opacity: 0;
+}
+.header_btns {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header_btns a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+  padding: 10px;
+  color: #000;
+}
+.header_btns a::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: 0;
+  transition: 0.35s;
+}
+.header_btns a:hover::after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
