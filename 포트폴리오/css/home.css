@@ -73,12 +73,12 @@
 }
 .content_title h1 {
   color: #000;
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: bold;
   animation: slide2 1s 2.3s ease-in-out both;
 }
 .content_title p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-left: 20%;
   animation: slide2 1s 2.8s ease-in-out both;
 }

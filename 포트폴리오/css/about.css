@@ -1,7 +1,7 @@
 /* About wrap */ 
 .about_wrap {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   color: #000;
   background: url('/img/배경화면.jpg') no-repeat;
   background-size: cover;
@@ -9,15 +9,15 @@
 
 /* body */
 .about_body {
-  width: 80%;
-  height: 90%;
+  width: 60%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
 }
 
 .about_box {
   width: 80%;
-  height: 80%;
+  height: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,28 +27,30 @@
 /* Content */
 .about_content {
   width: 100%;
-  height: 80%;
+  height: 90%;
   position: relative;
   letter-spacing: 2px;
-  padding-top: 70px;
 }
 .about_content_profile {
   width: 30%;
-  height: 60%;
+  height: 100%;
   position: absolute;
-  background-color: #dfdfdf;
+  background-color: #ccc;
   border-radius: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .profile_wrap {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  transform: translateY(30%);
 }
 .profile_pic {
   margin: 20px auto;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
   background-color: #555;
   border-radius: 50%;
@@ -94,7 +96,8 @@
   transform: translate(-50%, -50%);
   /* border: 1px solid red; */
 }
-.intro_can {
+.intro_skill,
+.intro_tool {
   width: 100%;
   height: 30%;
   display: flex;
@@ -104,7 +107,8 @@
   margin-top: 50px;
   margin-left: 50px;
 }
-.intro_can h1 {
+.intro_skill h1,
+.intro_tool h1 {
   font-weight: bold;
   font-size: 0.9em;
   color: #fff;

@@ -1,18 +1,18 @@
 .project_wrap {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   color: #000;
   /* background: url('/img/배경화면.jpg') no-repeat;
   background-size: cover; */
 }
 .project_body {
   width: 80vw;
-  height: 90vh;
+  height: 100vh;
   margin: 0 auto;
   position: relative;
 }
 .project_box {
-  width: 80%;
+  width: 60%;
   height: 80%;
   position: absolute;
   top: 50%;
