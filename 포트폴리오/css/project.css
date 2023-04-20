@@ -1,6 +1,6 @@
 .project_wrap {
   width: 100vw;
-  height: 200vh;
+  height: 220vh;
   color: #000;
   /* background: url('/img/배경화면.jpg') no-repeat;
   background-size: cover; */
@@ -26,6 +26,7 @@
   height: 100%;
   position: relative;
   letter-spacing: 2px;
+  transform: translateY(-200px);
 }
 .project_one {
   display: flex;
@@ -51,6 +52,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ccc;
+  transition: 0.5s;
 }
 .arrow_one {
   font-size: 4rem;
@@ -111,6 +113,7 @@ transform: translateX(-50px);
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ccc;
+  transition: 0.5s;
 }
 .arrow_two {
   font-size: 4rem;
@@ -171,6 +174,7 @@ transform: translateX(-50px);
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ccc;
+  transition: 0.5s;
 }
 .arrow_three {
   font-size: 4rem;
@@ -214,8 +218,8 @@ transform: translateX(-50px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
-  width: 110%;
-  height: 110%;
+  width: 130%;
+  height: 100%;
   background-color: #fff;
   border: 5px solid #000;
   visibility: hidden;
@@ -232,8 +236,8 @@ transform: translateX(-50px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
-  width: 110%;
-  height: 110%;
+  width: 130%;
+  height: 100%;
   background-color: #fff;
   border: 5px solid #000;
   visibility: hidden;
@@ -249,8 +253,8 @@ transform: translateX(-50px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, 60%);
-  width: 110%;
-  height: 110%;
+  width: 130%;
+  height: 100%;
   background-color: #fff;
   border: 5px solid #000;
   visibility: hidden;

@@ -123,3 +123,25 @@ thirdBtn.addEventListener("click", () => {
 thirdClose.addEventListener("click", () => {
   thirdModal.classList.remove("modal_active");
 })
+
+/* Scroll */
+const logo = document.querySelector(".header_logo");
+logo.addEventListener("click", () => {
+  window.scrollTo({top: 0, behavior: "smooth"});
+})
+
+const about = document.querySelector("#about");
+const project = document.querySelector("#project");
+const contact = document.querySelector("#contact");
+
+about.addEventListener("click", () => {
+  window.scrollTo({top: 1195, behavior: "smooth"});
+});
+
+project.addEventListener("click", () => {
+  window.scrollTo({top: 2268, behavior: "smooth"});
+})
+
+contact.addEventListener("click", () => {
+  window.scrollTo({top: 7000, behavior: "smooth"});
+})
