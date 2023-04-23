@@ -2,8 +2,8 @@
   width: 100vw;
   height: 220vh;
   color: #000;
-  /* background: url('/img/배경화면.jpg') no-repeat;
-  background-size: cover; */
+  background: url('/img/배경화면.jpg') no-repeat;
+  background-size: cover;
 }
 .project_body {
   width: 80vw;
@@ -47,7 +47,9 @@
   width: 700px;
   height: 500px;
   margin-right: 100px;
-  background-size: cover;
+  background-size: 700px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +58,7 @@
 }
 .arrow_one {
   font-size: 4rem;
+  cursor: pointer;
 }
 #left_one {
 transform: translateX(-50px);
@@ -66,6 +69,8 @@ transform: translateX(-50px);
 .project_one_left img {
   width: 700px;
   height: 500px;
+  background-size: cover;
+  background-position: center;
 }
 .project_one_title {
   width: 300px;
@@ -80,7 +85,7 @@ transform: translateX(-50px);
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.project_one_right button {
+.more_btn {
   width: 300px;
   height: 40px;
   font-size: 1rem;
@@ -88,6 +93,12 @@ transform: translateX(-50px);
   border-top: 2px solid #fff;
   background-color: #000;
   color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.more_btn:hover {
+  transform: scale(110%);
+  transition: 0.5s;
 }
 .project_two {
   display: flex;
@@ -108,7 +119,9 @@ transform: translateX(-50px);
   width: 700px;
   height: 500px;
   margin-left: 100px;
-  background-size: cover;
+  background-size: 700px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +130,7 @@ transform: translateX(-50px);
 }
 .arrow_two {
   font-size: 4rem;
+  cursor: pointer;
 }
 #left_two {
 transform: translateX(-50px);
@@ -141,15 +155,6 @@ transform: translateX(-50px);
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.project_two_left button {
-  width: 300px;
-  height: 40px;
-  font-size: 1rem;
-  border: none;
-  border-top: 2px solid #fff;
-  background-color: #000;
-  color: #fff;
-}
 .project_three {
   display: flex;
   align-items: center;
@@ -170,6 +175,7 @@ transform: translateX(-50px);
   height: 500px;
   margin-right: 100px;
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,6 +184,7 @@ transform: translateX(-50px);
 }
 .arrow_three {
   font-size: 4rem;
+  cursor: pointer;
 }
 #left_three {
 transform: translateX(-50px);
@@ -202,70 +209,374 @@ transform: translateX(-50px);
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.project_three_right button {
-  width: 300px;
-  height: 40px;
-  font-size: 1rem;
-  border: none;
-  border-top: 2px solid #fff;
-  background-color: #000;
-  color: #fff;
-}
 
 /* Modal */
+/* modal_one */
 .project_one_modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  width: 130%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   height: 100%;
-  background-color: #fff;
-  border: 5px solid #000;
+  background: url('/img/배경화면.jpg') no-repeat;
+  background-size: cover;
   visibility: hidden;
   transition: all 0.5s;
   opacity: 0;
+  z-index: 1000;
 }
-.project_one_modal span {
+.modal_header {
+  height: 10%;
+  width: 100%;
+}
+.modal_header_left {
+  position: relative;
+}
+.modal_logo_rect1 {
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+}
+.modal_logo_rect2 {
+  position: absolute;
+  top: 45px;
+  left: 110px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+}
+.modal_one_project {
+  display: inline-block;
+  position: absolute;
+  font-size: 3rem;
+  margin-top: 45px;
+  left: 8%;
+}
+.close_btn_one i {
   display: inline-block;
   font-size: 3rem;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.first_modal_body {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_modal_wrap {
+  width: 70%;
+  height: 70%;
+  position: relative;
+}
+.first_modal_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.first_modal_top_introduce {
+  width: 30%;
+  height: 100%;
+}
+.first_modal_top_introduce h1 {
+  margin: 30px 0;
+  margin-left: 50px; 
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.first_modal_top_introduce li {
+  margin: 30px 0;
+  margin-left: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.first_modal_top_slider {
+  width: 70%;
+  height: 100%;
+  margin-left: 100px;
+}
+.first_modal_top_slider img {
+  width: 70%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+.first_modal_bottom {
+  width: 100%;
+  height: 50%;
+  padding: 50px;
+}
+.first_modal_bottom p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 50px;
+  line-height: 1.5;
+  color: #777;
+  font-style: italic;
+}
+.first_modal_bottom::before {
+  content: "\F624";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+/* modal_two */
+.project_two_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img/배경화면.jpg') no-repeat;
+  background-size: cover;
+  visibility: hidden;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 1000;
+}
+.modal_header {
+  height: 10%;
+  width: 100%;
+}
+.modal_header_left {
+  position: relative;
+}
+.modal_logo_rect1 {
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+}
+.modal_logo_rect2 {
+  position: absolute;
+  top: 45px;
+  left: 110px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+}
+.modal_two_project {
+  display: inline-block;
+  position: absolute;
+  font-size: 3rem;
+  margin-top: 45px;
+  left: 8%;
+}
+.close_btn_two i {
+  display: inline-block;
+  font-size: 3rem;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.second_modal_body {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_modal_wrap {
+  width: 70%;
+  height: 70%;
+  position: relative;
+}
+.second_modal_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.second_modal_top_introduce {
+  width: 30%;
+  height: 100%;
+}
+.second_modal_top_introduce h1 {
+  margin: 30px 0;
+  margin-left: 50px; 
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.second_modal_top_introduce li {
+  margin: 30px 0;
+  margin-left: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.second_modal_top_slider {
+  width: 70%;
+  height: 100%;
+  margin-left: 100px;
+}
+.second_modal_top_slider img {
+  width: 70%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+.second_modal_bottom {
+  width: 100%;
+  height: 50%;
+  padding: 50px;
+}
+.second_modal_bottom p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 50px;
+  line-height: 1.5;
+  color: #777;
+  font-style: italic;
+}
+.second_modal_bottom::before {
+  content: "\F624";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+/* modal_three */
+.project_three_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img/배경화면.jpg') no-repeat;
+  background-size: cover;
+  visibility: hidden;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 1000;
+}
+.modal_header {
+  height: 10%;
+  width: 100%;
+}
+.modal_header_left {
+  position: relative;
+}
+.modal_logo_rect1 {
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+}
+.modal_logo_rect2 {
+  position: absolute;
+  top: 45px;
+  left: 110px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #000;
+}
+.modal_three_project {
+  display: inline-block;
+  position: absolute;
+  font-size: 3rem;
+  margin-top: 45px;
+  left: 8%;
+}
+.close_btn_three i {
+  display: inline-block;
+  font-size: 3rem;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.third_modal_body {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third_modal_wrap {
+  width: 70%;
+  height: 70%;
+  position: relative;
+}
+.third_modal_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.third_modal_top_introduce {
+  width: 30%;
+  height: 100%;
+}
+.third_modal_top_introduce h1 {
+  margin: 30px 0;
+  margin-left: 50px; 
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.third_modal_top_introduce li {
+  margin: 30px 0;
+  margin-left: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.third_modal_top_slider {
+  width: 70%;
+  height: 100%;
+  margin-left: 100px;
+}
+.third_modal_top_slider img {
+  width: 70%;
+  height: 100%;
+  border: 1px solid #ccc;
+}
+.third_modal_bottom {
+  width: 100%;
+  height: 50%;
+  padding: 50px;
+}
+.third_modal_bottom p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 50px;
+  line-height: 1.5;
+  color: #777;
+  font-style: italic;
+}
+.third_modal_bottom::before {
+  content: "\F624";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.2);
 }
 
-.project_two_modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 130%;
-  height: 100%;
-  background-color: #fff;
-  border: 5px solid #000;
-  visibility: hidden;
-  transition: all 0.5s;
-  opacity: 0;
-}
-.project_two_modal span {
-  display: inline-block;
-  font-size: 3rem;
-}
-.project_three_modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 60%);
-  width: 130%;
-  height: 100%;
-  background-color: #fff;
-  border: 5px solid #000;
-  visibility: hidden;
-  transition: all 0.5s;
-  opacity: 0;
-}
-.project_three_modal span {
-  display: inline-block;
-  font-size: 3rem;
-}
+/* Common Js class */
 .modal_active {
   visibility: visible;
   opacity: 1;
+}
+.close_btn_effect {
+  transform: scale(120%);
 }

@@ -95,9 +95,11 @@ const firstClose = document.querySelector(".close_btn_one");
 
 firstBtn.addEventListener("click", () => {
   firstModal.classList.add("modal_active");
+  document.body.style.overflow = "hidden";
 })
 firstClose.addEventListener("click", () => {
   firstModal.classList.remove("modal_active");
+  document.body.style.overflow = "unset";
 })
 
 /* ===== modal two ===== */
@@ -107,9 +109,11 @@ const secondClose = document.querySelector(".close_btn_two");
 
 secondBtn.addEventListener("click", () => {
   secondModal.classList.add("modal_active");
+  document.body.style.overflow = "hidden";
 })
 secondClose.addEventListener("click", () => {
   secondModal.classList.remove("modal_active");
+  document.body.style.overflow = "unset";
 })
 
 /* ===== modal three ===== */
@@ -119,9 +123,11 @@ const thirdClose = document.querySelector(".close_btn_three");
 
 thirdBtn.addEventListener("click", () => {
   thirdModal.classList.add("modal_active");
+  document.body.style.overflow = "hidden";
 })
 thirdClose.addEventListener("click", () => {
   thirdModal.classList.remove("modal_active");
+  document.body.style.overflow = "unset";
 })
 
 /* Scroll */
@@ -145,3 +151,28 @@ project.addEventListener("click", () => {
 contact.addEventListener("click", () => {
   window.scrollTo({top: 7000, behavior: "smooth"});
 })
+
+/* Mouse Event */
+const closeBtn = document.querySelector(".closeBtn");
+// const closeBtn = document.querySelectorAll(".closeBtn");
+
+// closeBtn.forEach((e) => {
+//   e.addEventListener("mouseover", () => {
+//     document.body.style.color = "red";
+//   });
+//   e.addEventListener("mouseleave", () => {
+//     document.body.style.color = "#000";
+//   });
+// });
+
+closeBtn.addEventListener("mouseover", () => {
+  closeBtn.classList.add("close_btn_effect");
+  closeBtn.style.color = "red";
+})
+closeBtn.addEventListener("mouseleave", () => {
+  closeBtn.classList.remove("close_btn_effect");
+  closeBtn.style.color = "#000";
+})
+
+
+
