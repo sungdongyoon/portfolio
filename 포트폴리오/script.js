@@ -9,6 +9,22 @@ $(function() {
       $(".header_logo span").removeClass("logo_eft");
     }
   });
+  /* 인트로 마우스 */
+  $(document).ready(function() {
+    $(".intro_img_cover").on("mouseover",function() {
+      $(this).css({
+        "transform": "scale(105%)",
+        "box-shadow": "15px 15px 10px rgba(0, 0, 0, 0.7)",
+        "border": "1px solid #000"
+      })
+    })
+    $(".intro_img_cover").on("mouseleave",function() {
+      $(this).css({
+        "transform": "scale(100%)",
+        "box-shadow": "none",
+      })
+    })
+  })
 });
 
 /* Project slider */

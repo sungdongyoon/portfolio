@@ -89,6 +89,7 @@ transform: translateX(-50px);
   width: 300px;
   height: 40px;
   font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-top: 2px solid #fff;
   background-color: #000;
@@ -97,8 +98,16 @@ transform: translateX(-50px);
   cursor: pointer;
 }
 .more_btn:hover {
-  transform: scale(110%);
-  transition: 0.5s;
+  background-color: red;
+  animation: beat 0.5s infinite alternate;
+}
+@keyframes beat {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(105%);
+  }
 }
 .project_two {
   display: flex;
