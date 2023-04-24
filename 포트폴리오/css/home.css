@@ -3,8 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  /* background: url('/img/배경화면.jpg') no-repeat; */
-  background-size: cover;
+  background: url('/img/배경화면2.jpg');
 }
 .home_wrap::before {
   content: "";

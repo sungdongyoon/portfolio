@@ -3,9 +3,7 @@
   width: 100vw;
   height: 80vh;
   color: #000;
-  background: url('/img/무채색4.jpg') no-repeat, url('/img/무채색1.jpg') no-repeat;
-  background-position: 0% 100px, 95% 550px;
-  /* background-size: cover; */
+  background: url('/img/배경화면2.jpg');
 }
 
 /* body */

@@ -1,6 +1,7 @@
 .contact_wrap {
   width: 100vw;
   height: 90vh;
+  background: url('/img/배경화면2.jpg');
 }
 .contact_body {
   width: 100vw;
