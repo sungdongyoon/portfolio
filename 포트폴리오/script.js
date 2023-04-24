@@ -169,26 +169,15 @@ contact.addEventListener("click", () => {
 })
 
 /* Mouse Event */
-const closeBtn = document.querySelector(".closeBtn");
-// const closeBtn = document.querySelectorAll(".closeBtn");
+const closeBtn = document.querySelectorAll(".closeBtn");
 
-// closeBtn.forEach((e) => {
-//   e.addEventListener("mouseover", () => {
-//     document.body.style.color = "red";
-//   });
-//   e.addEventListener("mouseleave", () => {
-//     document.body.style.color = "#000";
-//   });
-// });
-
-closeBtn.addEventListener("mouseover", () => {
-  closeBtn.classList.add("close_btn_effect");
-  closeBtn.style.color = "red";
-})
-closeBtn.addEventListener("mouseleave", () => {
-  closeBtn.classList.remove("close_btn_effect");
-  closeBtn.style.color = "#000";
-})
-
-
-
+for(let i = 0; i < closeBtn.length; i++) {
+  closeBtn[i].addEventListener("mouseover", () => {
+    closeBtn[i].style.color = "red";
+    closeBtn[i].classList.add("close_btn_effect");
+  })
+  closeBtn[i].addEventListener("mouseleave", () => {
+    closeBtn[i].style.color = "#000";
+    closeBtn[i].classList.remove("close_btn_effect");
+  })
+}

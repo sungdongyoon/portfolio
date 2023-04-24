@@ -2,8 +2,8 @@
   width: 100vw;
   height: 220vh;
   color: #000;
-  background: url('/img/배경화면.jpg') no-repeat;
-  background-size: cover;
+  background: url('/img/무채색7.jpg') no-repeat, url('/img/무채색8.jpg') no-repeat, url('/img/무채색9.jpg') no-repeat;
+  background-position: 0 700px, 100% 1700px, 50% 2400px;
 }
 .project_body {
   width: 80vw;
@@ -98,8 +98,10 @@ transform: translateX(-50px);
   cursor: pointer;
 }
 .more_btn:hover {
-  background-color: red;
-  animation: beat 0.5s infinite alternate;
+  /* background-color: #333; */
+  /* animation: beat 0.5s alternate; */
+  transform: scale(105%);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 @keyframes beat {
   0% {
@@ -229,7 +231,8 @@ transform: translateX(-50px);
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: url('/img/배경화면.jpg') no-repeat;
+  /* background: url('/img/배경화면.jpg') no-repeat; */
+  background-color: #fff;
   background-size: cover;
   visibility: hidden;
   transition: all 0.5s;
@@ -263,6 +266,7 @@ transform: translateX(-50px);
   display: inline-block;
   position: absolute;
   font-size: 3rem;
+  font-weight: bold;
   margin-top: 45px;
   left: 8%;
 }
@@ -291,6 +295,7 @@ transform: translateX(-50px);
   width: 100%;
   height: 50%;
   display: flex;
+  margin-left: 250px;
 }
 .first_modal_top_introduce {
   width: 30%;
@@ -299,15 +304,16 @@ transform: translateX(-50px);
 .first_modal_top_introduce h1 {
   margin: 30px 0;
   margin-left: 50px; 
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
 }
 .first_modal_top_introduce li {
   margin: 30px 0;
-  margin-left: 50px;
-  font-size: 1.8rem;
+  margin-left: 70px;
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #555;
 }
 .first_modal_top_slider {
   width: 70%;
@@ -333,12 +339,24 @@ transform: translateX(-50px);
   font-style: italic;
 }
 .first_modal_bottom::before {
-  content: "\F624";
+  content: "";
+  width: 300px;
+  height: 300px;
+  border: 5px solid #ccc;
   position: absolute;
-  top: 50%;
+  top: 400px;
+  left: -50px;
+  z-index: -100;
+}
+.first_modal_bottom::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #ccc;
+  position: absolute;
   left: 0;
-  font-size: 10rem;
-  color: rgba(0, 0, 0, 0.2);
+  top: 450px;
+  z-index: -100;
 }
 /* modal_two */
 .project_two_modal {
