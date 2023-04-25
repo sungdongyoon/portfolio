@@ -35,8 +35,28 @@ body::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, .1);
 }
 .go_top {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  border: 5px solid #fff;
   border-radius: 50%;
   background-color: #686868;
+  position: fixed;
+  bottom: 100px;
+  right: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  opacity: 0;
+  cursor: pointer;
+
+  visibility: hidden;
+}
+.go_top i {
+  font-size: 2rem;
+  color: #F7F7F7;
+}
+.go_top_active {
+  visibility: visible;
+  opacity: 1;
 }

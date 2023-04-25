@@ -9,6 +9,14 @@ $(function() {
       $(".header_logo span").removeClass("logo_eft");
     }
   });
+  /* top버튼 스크롤 */
+  $(window).scroll(function() {
+    if($(window).scrollTop() > 700) {
+      $(".go_top").addClass("go_top_active");
+    } else {
+      $(".go_top").removeClass("go_top_active");
+    }
+  });
   /* 인트로 마우스 */
   $(document).ready(function() {
     $(".intro_img_cover").on("mouseover",function() {
@@ -154,6 +162,7 @@ logo.addEventListener("click", () => {
 const about = document.querySelector("#about");
 const project = document.querySelector("#project");
 const contact = document.querySelector("#contact");
+const goTop = document.querySelector(".go_top");
 
 about.addEventListener("click", () => {
   window.scrollTo({top: 1195, behavior: "smooth"});
@@ -165,6 +174,10 @@ project.addEventListener("click", () => {
 
 contact.addEventListener("click", () => {
   window.scrollTo({top: 7000, behavior: "smooth"});
+})
+
+goTop.addEventListener("click", () => {
+  window.scrollTo({top: 0, behavior: "smooth"});
 })
 
 /* Mouse Event */

@@ -135,6 +135,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 
 /* footer */
