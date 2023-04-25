@@ -15,7 +15,6 @@ $(function() {
       $(this).css({
         "transform": "scale(105%)",
         "box-shadow": "15px 15px 10px rgba(0, 0, 0, 0.7)",
-        "border": "1px solid #000"
       })
     })
     $(".intro_img_cover").on("mouseleave",function() {
@@ -173,7 +172,7 @@ const closeBtn = document.querySelectorAll(".closeBtn");
 
 for(let i = 0; i < closeBtn.length; i++) {
   closeBtn[i].addEventListener("mouseover", () => {
-    closeBtn[i].style.color = "red";
+    closeBtn[i].style.color = "#686868";
     closeBtn[i].classList.add("close_btn_effect");
   })
   closeBtn[i].addEventListener("mouseleave", () => {

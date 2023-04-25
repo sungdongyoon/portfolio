@@ -29,9 +29,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   height: 5%;
   background: #000;
-  
   border-radius: 10px;
 }
 body::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, .1);
+}
+.go_top {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #686868;
 }
