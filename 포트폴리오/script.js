@@ -154,6 +154,7 @@ thirdClose.addEventListener("click", () => {
   document.body.style.overflow = "unset";
 })
 
+
 /* Scroll */
 const logo = document.querySelector(".header_logo");
 logo.addEventListener("click", () => {

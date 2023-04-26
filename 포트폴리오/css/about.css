@@ -61,7 +61,7 @@
   font-size: 1rem;
 }
 .profile_info {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 20px;
   color: #686868;
 }
@@ -79,10 +79,18 @@
   align-items: center;
   margin-top: 70px;
   transform: translateX(-25px);
+  position: relative;
+}
+.link span {
+  cursor: pointer;
 }
 .link img {
   width: 40px;
   height: 40px;
+}
+#blog {
+  width: 30px;
+  height: 30px;
 }
 .about_content_intro {
   width: 60%;
