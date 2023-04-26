@@ -23,6 +23,7 @@
   display: inline-block;
   font-size: 4rem;
   font-weight: bold;
+  margin: 0 auto;
 }
 .common_title_right {
   width: 90%;

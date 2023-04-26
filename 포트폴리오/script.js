@@ -60,6 +60,7 @@ projectOneArrows.forEach(function(e) {
   });
 });
 
+
 /* ===== slider two ===== */
 const projectTwo = document.querySelector(".project_two_right");
 const projectTwoImages = ["반응형2-1.png", "반응형2-2.png", "반응형2-3.png"];
