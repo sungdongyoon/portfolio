@@ -112,13 +112,17 @@ projectThreeArrows.forEach(function(e) {
 });
 
 /* Modal */
-/* =====intro modal=====*/
-// const html = document.querySelector("#html");
-// const htmlDetail = document.querySelector(".html_detail")
+/* skill modal */
+const html = document.querySelector("#html");
+const htmlDetail = document.querySelector(".html_detail");
+const skillClose = document.querySelector(".skill_close");
 
-// html.addEventListener("click", () => {
-//   htmlDetail.classList.add("html_active");
-// })
+html.addEventListener("click", () => {
+  htmlDetail.classList.add("skill_active");
+})
+skillClose.addEventListener("click", () => {
+  htmlDetail.classList.remove("skill_active");
+})
 
 /* ===== modal one ===== */
 const firstModal = document.querySelector(".project_one_modal");

@@ -152,18 +152,12 @@
   transition: 0.5s;
   cursor: pointer;
 }
-.intro_img img {
+.intro_img_cover img {
   width: 60px;
   height: 60px;
   margin: 20px; 
 }
-/* .html_detail {
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  background-color: #E4E4E4;
-  top: 80px;
-} */
+
 
 /* modal */
 .skill_detail {
@@ -173,4 +167,40 @@
   background-color: #E4E4E4;
   top: 80px;
   display: none;
+}
+.detail {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  top: 80px;
+  padding: 20px;
+  /* display: none; */
+}
+.detail img {
+  width: 17%;
+  height: 50%;
+}
+.html_detail {
+  display: none;
+}
+.css_detail {
+  display: none;
+}
+.js_detail {
+  display: none;
+}
+.jquery_detail {
+  display: none;
+}
+.detail span i {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.skill_active {
+  display: block;
 }
