@@ -112,6 +112,14 @@ projectThreeArrows.forEach(function(e) {
 });
 
 /* Modal */
+/* =====intro modal=====*/
+// const html = document.querySelector("#html");
+// const htmlDetail = document.querySelector(".html_detail")
+
+// html.addEventListener("click", () => {
+//   htmlDetail.classList.add("html_active");
+// })
+
 /* ===== modal one ===== */
 const firstModal = document.querySelector(".project_one_modal");
 const firstBtn = document.querySelector(".pj_one_btn");
@@ -153,6 +161,8 @@ thirdClose.addEventListener("click", () => {
   thirdModal.classList.remove("modal_active");
   document.body.style.overflow = "unset";
 })
+
+
 
 
 /* Scroll */
