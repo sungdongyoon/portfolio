@@ -113,16 +113,59 @@ projectThreeArrows.forEach(function(e) {
 
 /* Modal */
 /* skill modal */
+const detail = document.querySelectorAll(".detail");
+const skillClose = document.querySelectorAll(".intro_close");
+for(let i = 0; i < skillClose.length; i++) {
+  skillClose[i].addEventListener("click", () => {
+    detail[i].classList.remove("intro_active");
+  })
+}
+
 const html = document.querySelector("#html");
 const htmlDetail = document.querySelector(".html_detail");
-const skillClose = document.querySelector(".skill_close");
+const css = document.querySelector("#css");
+const cssDetail = document.querySelector(".css_detail");
+const js = document.querySelector("#js");
+const jsDetail = document.querySelector(".js_detail");
+const jquery = document.querySelector("#jquery");
+const jqueryDetail = document.querySelector(".jquery_detail");
 
 html.addEventListener("click", () => {
-  htmlDetail.classList.add("skill_active");
+  htmlDetail.classList.add("intro_active");
 })
-skillClose.addEventListener("click", () => {
-  htmlDetail.classList.remove("skill_active");
+css.addEventListener("click", () => {
+  cssDetail.classList.add("intro_active");
 })
+js.addEventListener("click", () => {
+  jsDetail.classList.add("intro_active");
+})
+jquery.addEventListener("click", () => {
+  jqueryDetail.classList.add("intro_active");
+})
+
+/* tool modal */
+const figma = document.querySelector("#figma");
+const figmaDetail = document.querySelector(".figma_detail");
+const github = document.querySelector("#github");
+const githubDetail = document.querySelector(".github_detail");
+const photoshop = document.querySelector("#photoshop");
+const photoshopDetail = document.querySelector(".photoshop_detail");
+const vscode = document.querySelector("#vscode");
+const vscodeDetail = document.querySelector(".vscode_detail");
+
+figma.addEventListener("click", () => {
+  figmaDetail.classList.add("intro_active");
+})
+github.addEventListener("click", () => {
+  githubDetail.classList.add("intro_active");
+})
+photoshop.addEventListener("click", () => {
+  photoshopDetail.classList.add("intro_active");
+})
+vscode.addEventListener("click", () => {
+  vscodeDetail.classList.add("intro_active");
+})
+
 
 /* ===== modal one ===== */
 const firstModal = document.querySelector(".project_one_modal");
@@ -209,3 +252,14 @@ for(let i = 0; i < closeBtn.length; i++) {
     closeBtn[i].classList.remove("close_btn_effect");
   })
 }
+
+
+
+/* contact */
+const name = document.querySelector("#name");
+const button = document.querySelector("#form_button")
+
+button.addEventListener("submit", (event) => {
+  event.preventDefault();
+  alert(`${name.value}님, 연락주셔서 감사합니다`)
+})

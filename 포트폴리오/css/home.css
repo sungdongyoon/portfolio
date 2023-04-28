@@ -64,7 +64,7 @@
   position: relative;
 }
 .content_title {
-  width: 70%;
+  width: 80%;
   height: 70%;
   position: absolute;
   top: 30%;
@@ -73,13 +73,14 @@
 }
 .content_title h1 {
   color: #000;
-  font-size: 8rem;
+  font-size: 8.5rem;
   font-weight: bold;
   animation: slide2 1s 2.3s ease-in-out both;
 }
 .content_title p {
   font-size: 2rem;
-  margin-left: 20%;
+  font-style: italic;
+  margin-left: 25%;
   animation: slide2 1s 2.8s ease-in-out both;
 }
 

@@ -81,7 +81,7 @@
   transform: translateX(-25px);
   position: relative;
 }
-.link span {
+.link a {
   cursor: pointer;
 }
 .link img {
@@ -139,6 +139,15 @@
   margin-bottom: 10px;
   padding: 10px 0;
 }
+.intro_skill::after,
+.intro_tool::after {
+  content: '* 자세히 보려면 아이콘을 클릭해주세요';
+  font-size: 0.6rem;
+  margin-top: 10px;
+  position: absolute;
+  top: 45px;
+  left: 150px;
+}
 .intro_img {
   display: flex;
   align-items: center;
@@ -160,14 +169,17 @@
 
 
 /* modal */
-.skill_detail {
+
+/* .skill_detail {
   width: 90%;
   height: 90%;
   position: absolute;
   background-color: #E4E4E4;
   top: 80px;
   display: none;
-}
+} */
+
+/* skill modal */
 .detail {
   width: 90%;
   height: 100%;
@@ -176,7 +188,8 @@
   color: #fff;
   top: 80px;
   padding: 20px;
-  /* display: none; */
+  transition: 0.5s;
+
 }
 .detail img {
   width: 17%;
@@ -201,6 +214,19 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.skill_active {
+/* tool modal */
+.figma_detail {
+  display: none;
+}
+.github_detail {
+  display: none;
+}
+.photoshop_detail {
+  display: none;
+}
+.vscode_detail {
+  display: none;
+}
+.intro_active {
   display: block;
 }
