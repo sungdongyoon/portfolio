@@ -21,6 +21,7 @@
 </head>
 <body>
   <div class="container">
+    <div class="day_night"><i class="fa-regular fa-moon" id="dark_toggle"></i></div>
     <div class="go_top"><i class="fa-solid fa-chevron-up"></i></div>
     <!-- Home -->
     <div class="home_wrap">
@@ -209,7 +210,7 @@
               </div>
               <div class="project_one_right">
                 <div class="project_one_title">
-                  <h2>Responsive Web Page</h2>
+                  <h2 class="project_h2">Responsive Web Page</h2>
                   <div class="project_one_content">
                     <div class="project_one_explain">
                       <p>PC와 모바일에서 작동하는 웹 페이지입니다.<br />
@@ -221,17 +222,18 @@
                 </div>
                 <button class="pj_one_btn more_btn">VIEW MORE</button>
               </div>
+              <div class="project_one_square project_square"></div>
             </div>
             <div class="project_two">
               <div class="project_two_left">
                 <div class="project_two_title">
-                  <h2>My Portfolio</h2>
+                  <h2 class="project_h2">My Portfolio</h2>
                   <div class="project_two_content">
                     <div class="project_two_explain">
                       <p>HTML, CSS, JavaScript, jQuery를 <br />
                         사용, 플러그인을 이용하지 않고 제작한<br />
-                        저의 포트폴리오 페이지 입니다.<br />
-                        </p>
+                        포트폴리오 페이지 입니다.<br />
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -241,6 +243,7 @@
                 <div class="arrow_two" id="left_two">&lang;</div>
                 <div class="arrow_two" id="right_two">&rang;</div>
               </div>
+              <div class="project_two_square project_square"></div>
             </div>
             <div class="project_three">
               <div class="project_three_left">
@@ -249,7 +252,7 @@
               </div>
               <div class="project_three_right">
                 <div class="project_three_title">
-                  <h2>Mobile Page</h2>
+                  <h2 class="project_h2">Mobile Page</h2>
                   <div class="project_three_content">
                     <div class="project_three_explain">
                       <p>html, css를 이용하여 만든 <br />모바일 페이지입니다.</p>
@@ -258,6 +261,7 @@
                 </div>
                 <button class="pj_three_btn more_btn">VIEW MORE</button>
               </div>
+              <div class="project_three_square project_square"></div>
             </div>
           </div>
         </div>
@@ -280,7 +284,7 @@
         <div class="first_modal_wrap">
           <div class="first_modal_top">
             <div class="first_modal_top_introduce">
-              <h1>반응형 웹 페이지 1</h1>
+              <h1>반응형 웹 페이지</h1>
               <ul>
                 <li>개발인원 : 1명</li>
                 <li>기간 : 23.00.00 ~ 23.00.00</li>
@@ -397,13 +401,13 @@
           </div>
           <div class="contact_content">
             <div class="contact_content_title">
-              <h1>Contact Me !!!</h1>
+              <h1>Contact Me!</h1>
             </div>
             <div class="contact_content_form">
               <form class="contact_form_box">
                 <div class="contact_form_name">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" required>
+                  <label for="userName">Name</label>
+                  <input type="text" id="userName" required>
                 </div>
                 <div class="contact_form_email">
                   <label for="eamil">E-mail</label>

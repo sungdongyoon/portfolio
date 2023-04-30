@@ -1,7 +1,7 @@
 .contact_wrap {
   width: 100vw;
   height: 90vh;
-  /* background: url('/img/배경화면2.jpg'); */
+  color: var(--white);
 }
 .contact_body {
   width: 100vw;
@@ -20,7 +20,8 @@
   width: 100%;
   height: 90%;
   position: relative;
-  background-color: #686868;
+  border: 1px solid var(--white);
+  background-color: var(--gray);
 }
 .contact_content_title {
   width: 100%;
@@ -28,11 +29,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 3px solid #999; */
 }
 .contact_content_title h1 {
   font-size: 3.5rem;
-  color: #fff;
+  font-family: var(--main-en);
+  /* color: var(--white); */
 }
 .contact_content_form {
   position: absolute;
@@ -65,7 +66,8 @@
   width: 100%;
   height: 50%;
   font-size: 1.5rem;
-  color: #fff;
+  font-family: var(--main-en);
+  /* color: var(--white); */
   font-weight: bold;
 }
 .contact_form_name input {
@@ -89,7 +91,7 @@
   width: 100%;
   height: 50%;
   font-size: 1.5rem;
-  color: #fff;
+  /* color: var(--white); */
   font-weight: bold;
 }
 .contact_form_email input {
@@ -113,7 +115,7 @@
   width: 100%;
   height: 25%;
   font-size: 1.5rem;
-  color: #fff;
+  /* color: var(--white); */
   font-weight: bold;
 }
 .contact_form_message textarea {
@@ -131,8 +133,10 @@
 .contact_form_button input {
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  font-size: 1.2rem;
+  background-color: var(--white);
+  font-family: var(--main-en);
+  color: var(--black);
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -142,12 +146,13 @@
 .contact_footer {
   width: 100vw;
   height: 20%;
-  background-color: #686868;
-  color: #fff;
+  background-color: var(--gray);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact_footer p {
+  font-family: var(--main-en);
   font-size: 1.2rem;
+  /* color: var(--white); */
 }

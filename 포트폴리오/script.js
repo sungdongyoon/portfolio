@@ -17,6 +17,14 @@ $(function() {
       $(".go_top").removeClass("go_top_active");
     }
   });
+  /* 다크모드버튼 스크롤 */
+  $(window).scroll(function() {
+    if($(window).scrollTop() > 700) {
+      $(".day_night").addClass("day_night_visible");
+    } else {
+      $(".day_night").removeClass("day_night_visible");
+    }
+  });
   /* 인트로 마우스 */
   $(document).ready(function() {
     $(".intro_img_cover").on("mouseover",function() {
@@ -33,6 +41,70 @@ $(function() {
     })
   })
 });
+
+
+/* 다크모드 토글버튼 */
+const container = document.querySelector(".container");
+const dayNight = document.querySelector(".day_night");
+
+dayNight.addEventListener("click", () => {
+  const darkToggle = document.querySelector("#dark_toggle");
+  if(darkToggle.classList.contains("fa-moon")) {
+    darkToggle.classList.remove("fa-moon");
+    darkToggle.classList.add("fa-sun");
+  } else {
+    darkToggle.classList.remove("fa-sun");
+    darkToggle.classList.add("fa-moon");
+  }
+  
+
+  const header = document.querySelector(".common_header");
+  const home = document.querySelector(".home_wrap");
+  const about = document.querySelector(".about_wrap");
+  const project = document.querySelector(".project_wrap");
+  const contact = document.querySelector(".contact_wrap");
+  const contactFooter = document.querySelector(".contact_footer");
+  const square = document.querySelector(".square")
+  const square2 = document.querySelector(".square2")
+  const contactContent = document.querySelector(".contact_content");
+  const aboutContent = document.querySelector(".about_content");
+
+  header.classList.toggle("day_night_active");
+  home.classList.toggle("day_night_active");
+  about.classList.toggle("about_active");
+  project.classList.toggle("day_night_active");
+  contact.classList.toggle("day_night_active");
+  contactFooter.classList.toggle("backgroundBlack");
+  square.classList.toggle("backgroundWhite");
+  square2.classList.toggle("borderWhite");
+  contactContent.classList.toggle("backgroundBlack");
+  aboutContent.classList.toggle("backgroundBlack");
+
+  const commonTitle = document.querySelectorAll(".common_title");
+  for(let i = 0; i < commonTitle.length; i++) {
+    commonTitle[i].classList.toggle("colorWhite");
+  }
+
+  const commonTitleRight = document.querySelectorAll(".common_title_right");
+  for(let i = 0; i < commonTitle.length; i++) {
+    commonTitleRight[i].classList.toggle("backgroundWhite");
+  }
+
+  const projectH2 = document.querySelectorAll(".project_h2");
+  for(let i = 0; i < projectH2.length; i++) {
+    projectH2[i].classList.toggle("colorWhiteShadow");
+  }
+
+  const projectSquare = document.querySelectorAll(".project_square")
+  for(let i = 0; i< projectSquare.length; i++) {
+    projectSquare[i].classList.toggle("backgroundBlack");
+  }
+
+  const moreBtn = document.querySelectorAll(".more_btn");
+  for(let i = 0; i<moreBtn.length; i++) {
+    moreBtn[i].classList.toggle("moreBtn_active");
+  }
+})
 
 /* Project slider */
 /* ===== slider one ===== */
@@ -244,7 +316,7 @@ const closeBtn = document.querySelectorAll(".closeBtn");
 
 for(let i = 0; i < closeBtn.length; i++) {
   closeBtn[i].addEventListener("mouseover", () => {
-    closeBtn[i].style.color = "#686868";
+    closeBtn[i].style.color = "red";
     closeBtn[i].classList.add("close_btn_effect");
   })
   closeBtn[i].addEventListener("mouseleave", () => {
@@ -256,10 +328,27 @@ for(let i = 0; i < closeBtn.length; i++) {
 
 
 /* contact */
-const name = document.querySelector("#name");
+const userName = document.querySelector("#userName");
 const button = document.querySelector("#form_button")
 
-button.addEventListener("submit", (event) => {
+button.addEventListener("click", (event) => {
   event.preventDefault();
-  alert(`${name.value}님, 연락주셔서 감사합니다`)
-})
+  if(userName.value != "") {
+    if(email.value != "") {
+      if(message.value != "") {
+        alert(`${userName.value}님, 연락주셔서 감사합니다`)
+        userName.value = "";
+        email.value = "";
+        message.value = "";
+      } else if(message.value == "") {
+        alert("메세지를 입력해주세요!")
+      }
+    } else if(email.value == "") {
+      alert("이메일을 입력해주세요!")
+    }
+  } else if(userName.value == "") {
+    alert("이름을 입력해주세요!")
+  }
+});
+
+
