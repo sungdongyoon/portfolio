@@ -39,6 +39,22 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background: rgba(33, 122, 244, .1);
 }
+/* snow */
+.snowflake {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--white);
+  position: absolute;
+  top: -10px;
+}
+@keyframes fall {
+  from {}
+  to {
+    transform: translateY(500vh);
+    opacity: 0;
+  }
+}
 .go_top {
   width: 70px;
   height: 70px;
@@ -65,6 +81,8 @@ body::-webkit-scrollbar-track {
   visibility: visible;
   opacity: 1;
 }
+
+/* 다크모드 */
 .day_night {
   width: 70px;
   height: 70px;
@@ -91,18 +109,18 @@ body::-webkit-scrollbar-track {
   visibility: visible;
   opacity: 1;
 }
-
-/* 다크모드 */
 .day_night_active{
   background-color: var(--black) !important;
   color: var(--white) !important;
+  text-shadow: 0 0 15px var(--white) !important;
 }
 .colorWhite {
   color: var(--white);
+  text-shadow: 0 0 20px var(--white);
 }
 .colorWhiteShadow {
   color: var(--white);
-  text-shadow: 4px 4px 3px rgba(255, 255, 255, 0.5);
+  /* text-shadow: 4px 4px 3px rgba(255, 255, 255, 0.5); */
 }
 .colorBlack {
   color: var(--black);
@@ -114,7 +132,8 @@ body::-webkit-scrollbar-track {
   background-color: var(--black);
 }
 .borderWhite {
-  border-color: var(--white);
+  border: 1px solid var(--white);
+  box-shadow: 0px 0px 30px var(--gray);
 }
 .borderBlack {
   border-color: var(--black);
@@ -123,8 +142,12 @@ body::-webkit-scrollbar-track {
   background-color: var(--whtie);
   color: var(--white);
   border: 1px solid var(--white);
+  text-shadow: 0 0 20px var(--white);
 }
 .about_active {
   background-color: var(--black);
   color: var(--white);
+}
+.invert {
+  filter: invert(100%);
 }

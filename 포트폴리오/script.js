@@ -43,6 +43,10 @@ $(function() {
 });
 
 
+
+
+
+
 /* 다크모드 토글버튼 */
 const container = document.querySelector(".container");
 const dayNight = document.querySelector(".day_night");
@@ -57,6 +61,10 @@ dayNight.addEventListener("click", () => {
     darkToggle.classList.add("fa-moon");
   }
   
+  dayNight.classList.toggle("day_night_active");
+
+  const goTop = document.querySelector(".go_top");
+  goTop.classList.toggle("day_night_active");
 
   const header = document.querySelector(".common_header");
   const home = document.querySelector(".home_wrap");
@@ -68,6 +76,7 @@ dayNight.addEventListener("click", () => {
   const square2 = document.querySelector(".square2")
   const contactContent = document.querySelector(".contact_content");
   const aboutContent = document.querySelector(".about_content");
+  const profileWrap = document.querySelector(".profile_wrap");
 
   header.classList.toggle("day_night_active");
   home.classList.toggle("day_night_active");
@@ -79,6 +88,7 @@ dayNight.addEventListener("click", () => {
   square2.classList.toggle("borderWhite");
   contactContent.classList.toggle("backgroundBlack");
   aboutContent.classList.toggle("backgroundBlack");
+  profileWrap.classList.toggle("colorWhite");
 
   const commonTitle = document.querySelectorAll(".common_title");
   for(let i = 0; i < commonTitle.length; i++) {
@@ -90,9 +100,14 @@ dayNight.addEventListener("click", () => {
     commonTitleRight[i].classList.toggle("backgroundWhite");
   }
 
+  const projectTitle = document.querySelectorAll(".project_title");
+  for(let i = 0; i < projectTitle.length; i++) {
+    projectTitle[i].classList.toggle("borderWhite");
+  }
+
   const projectH2 = document.querySelectorAll(".project_h2");
   for(let i = 0; i < projectH2.length; i++) {
-    projectH2[i].classList.toggle("colorWhiteShadow");
+    projectH2[i].classList.toggle("colorWhite");
   }
 
   const projectSquare = document.querySelectorAll(".project_square")
@@ -101,8 +116,41 @@ dayNight.addEventListener("click", () => {
   }
 
   const moreBtn = document.querySelectorAll(".more_btn");
-  for(let i = 0; i<moreBtn.length; i++) {
+  for(let i = 0; i < moreBtn.length; i++) {
     moreBtn[i].classList.toggle("moreBtn_active");
+  }
+
+  const linkSvg = document.querySelectorAll(".link img");
+  for(let i = 0; i < linkSvg.length; i++) {
+    linkSvg[i].classList.toggle("invert");
+  }
+
+  /* snow */
+  const body = document.querySelector("body");
+  const MIN_DURATION = 10;
+
+  function snowFlake() {
+    const snowflake = document.createElement("div");
+    const delay = Math.random() * 10;
+    const opacity = Math.random();
+    const duration = Math.random() * 20 + MIN_DURATION;
+  
+    snowflake.classList.add("snowflake");
+    snowflake.style.left = `${Math.random() * window.screen.width}px`;
+    snowflake.style.animationDelay = `${delay}s`;
+    snowflake.style.opacity = opacity;
+    snowflake.style.animation = `fall ${duration}s linear`
+  
+    body.appendChild(snowflake);
+  
+    setTimeout(() => {
+      body.removeChild(snowflake);
+      snowFlake();
+    }, (duration + delay) * 600);
+  }
+  
+  for(let i = 0; i < 100; i ++) {
+    setTimeout(snowFlake, 500 * i);
   }
 })
 
