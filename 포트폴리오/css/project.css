@@ -328,7 +328,7 @@ transform: translateX(-50px);
   bottom: 450px;
 }
 .first_modal_top_introduce {
-  width: 30%;
+  width: 35%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -675,9 +675,6 @@ transform: translateX(-50px);
   visibility: visible;
   opacity: 1;
 }
-/* .close_btn_effect {
-  text-shadow: 10px 10px 3px var(--gray);
-} */
 .modal_header {
   height: 10%;
   width: 100%;

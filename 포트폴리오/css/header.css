@@ -1,6 +1,6 @@
 /* Header */
 .common_header {
-  height: 10%;
+  height: 11%;
   background-color: transparent;
   transition: 0.5s;
 
@@ -21,7 +21,6 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  font-family: var(--main-en);
 }
 .header_logo div {
   display: inline-block;
@@ -30,13 +29,17 @@
   cursor: pointer;
 }
 .header_logo strong {
-  font-size: 2em;
+  font-size: 4rem;
+  font-family: var(--main-en);
+  font-weight: 500;
 }
 .header_logo span {
+  font-size: 2rem;
   transition: 0.5s;
   font-family: var(--main-en);
+  font-weight: 500;
 }
-.header_logo span.logo_eft {
+.span_eft {
   opacity: 0;
 }
 .header_btns {
@@ -50,7 +53,6 @@
   font-weight: 400;
   position: relative;
   padding: 10px;
-  /* color: var(--black); */
   cursor: pointer;
 }
 .header_btns span::before {

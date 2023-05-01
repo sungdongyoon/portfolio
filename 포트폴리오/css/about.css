@@ -178,26 +178,15 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--white);
-  top: 80px;
+  top: 0px;
   padding: 20px;
   transition: 0.5s;
-
+  opacity: 0;
+  visibility: hidden;
 }
 .detail img {
   width: 17%;
   height: 50%;
-}
-.html_detail {
-  display: none;
-}
-.css_detail {
-  display: none;
-}
-.js_detail {
-  display: none;
-}
-.jquery_detail {
-  display: none;
 }
 .detail span i {
   position: absolute;
@@ -207,18 +196,8 @@
   cursor: pointer;
 }
 /* tool modal */
-.figma_detail {
-  display: none;
-}
-.github_detail {
-  display: none;
-}
-.photoshop_detail {
-  display: none;
-}
-.vscode_detail {
-  display: none;
-}
 .intro_active {
-  display: block;
+  visibility: visible;
+  transform: translateY(70px);
+  opacity: 1;
 }

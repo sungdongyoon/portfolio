@@ -3,10 +3,12 @@ $(function() {
   $(window).scroll(function() {
     if($(window).scrollTop() > 50) {
       $(".common_header").addClass("header_eft");
-      $(".header_logo span").addClass("logo_eft");
+      $(".header_logo span").addClass("span_eft");
+      $(".header_logo strong").addClass("strong_eft");
     } else {
       $(".common_header").removeClass("header_eft");
-      $(".header_logo span").removeClass("logo_eft");
+      $(".header_logo span").removeClass("span_eft");
+      $(".header_logo strong").removeClass("strong_eft");
     }
   });
   /* top버튼 스크롤 */
@@ -129,28 +131,28 @@ dayNight.addEventListener("click", () => {
   const body = document.querySelector("body");
   const MIN_DURATION = 10;
 
-  function snowFlake() {
-    const snowflake = document.createElement("div");
+  function snowFalling() {
+    const snowfalling = document.createElement("div");
     const delay = Math.random() * 10;
     const opacity = Math.random();
     const duration = Math.random() * 20 + MIN_DURATION;
   
-    snowflake.classList.add("snowflake");
-    snowflake.style.left = `${Math.random() * window.screen.width}px`;
-    snowflake.style.animationDelay = `${delay}s`;
-    snowflake.style.opacity = opacity;
-    snowflake.style.animation = `fall ${duration}s linear`
+    snowfalling.classList.add("snowflake");
+    snowfalling.style.left = `${Math.random() * window.screen.width}px`;
+    snowfalling.style.animationDelay = `${delay}s`;
+    snowfalling.style.opacity = opacity;
+    snowfalling.style.animation = `fall ${duration}s linear`
   
-    body.appendChild(snowflake);
+    body.appendChild(snowfalling);
   
     setTimeout(() => {
-      body.removeChild(snowflake);
-      snowFlake();
+      body.removeChild(snowfalling);
+      snowFalling();
     }, (duration + delay) * 600);
   }
-  
+   
   for(let i = 0; i < 100; i ++) {
-    setTimeout(snowFlake, 500 * i);
+    setTimeout(snowFalling, 500 * i);
   }
 })
 
