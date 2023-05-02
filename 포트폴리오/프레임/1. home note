@@ -1,0 +1,99 @@
+.container
+	div.about_wrap
+		div.about_body
+			div.about_box
+				div.common_title
+					div.common_title_left
+						span
+					div.common_title_right
+				div.about__content
+					div.about_content_profile
+						div.profile_wrap
+							div.profile_title
+								h1 윤동성
+								h3	yoon dong sung
+							div.profile_info
+								div.address
+									h4
+									p
+								div.birth
+									h4
+									p
+								div.phone
+									h4
+									p
+								div.email
+									h4
+									p
+								div.link
+									a > img
+									a > img
+									a > img
+					div.about_content_intro
+						div.intro_wrap
+							div.intro_skill
+								h1
+								div.intro_img
+									div.intro_img_cover #html
+										img
+									div.intro_img_cover #css
+										img
+									div.intro_img_cover #js
+										img
+									div.intro_img_cover #jquery
+										img
+								div.html_detail detail
+									img
+									span
+										i
+									p (html 설명)
+								div.css_detail detail
+									img
+									span
+										i
+									p (css 설명)
+								div.js_detail detail
+									img
+									span
+										i
+									p (js 설명)
+								div.jquery_detail detail
+									img
+									span
+										i
+									p (jquery 설명)
+							div.intro_tool
+								h1
+								div.intro_img
+									div.intro_img_cover #figma
+										img
+									div.intro_img_cover #github
+										img
+									div.intro_img_cover #photoshop
+										img
+									div.intro_img_cover #vscode
+										img
+								div.figma_detail detail
+									img
+									span
+										i
+									p (figma 설명)
+								div.github_detail detail
+									img
+									span
+										i
+									p (github 설명)
+								div.photoshop_detail detail
+									img
+									span
+										i
+									p (photoshop 설명)
+								div.vscode_detail detail
+									img
+									span
+										i
+									p (vscode 설명)
+									
+									
+									
+									
