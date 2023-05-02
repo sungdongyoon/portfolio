@@ -100,7 +100,7 @@ dayNight.addEventListener("click", () => {
     }, (duration + delay) * 600);
   }
   
-  for(let i = 0; i < 100; i ++) {
+  for(let i = 0; i < 60; i ++) {
     setTimeout(snowFalling, 500 * i);
   }
 })
