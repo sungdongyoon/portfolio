@@ -44,21 +44,48 @@
   }
   .common_title_left {
     height: 50px !important;
-    width: 90% !important;
+    width: 50% !important;
     display: flex !important;
     align-items: center !important;
     margin: 0 auto;
     margin-top: 40px;
-    border-top: 3px double var(--gray);
-    border-bottom: 3px double var(--gray);
     border-radius: 10px;
     padding: 30px 0 !important;
-    background-color: var(--black);
+    background-color: transparent;
+    position: relative;
+  }
+  .common_title_left::before {
+    content: "";
+    height: 3px;
+    border-top: 2px dotted var(--black);
+    border-bottom: 2px dotted var(--black);
+    position: absolute;
+    width: 40%;
+    top: 45%;
+    right: 100%;
+    z-index: -999;
+  }
+  .common_title_left::after {
+    content: "";
+    height: 3px;
+    border-top: 2px dotted var(--black);
+    border-bottom: 2px dotted var(--black);
+    position: absolute;
+    width: 40%;
+    top: 45%;
+    left: 100%;
+    z-index: -999;
   }
   .common_title_left span {
-    font-size: 2rem !important;
-    text-shadow: 5px 5px 5px var(--light-gray);
-    color: var(--white);
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    text-shadow: 3px 3px 1px var(--gray),
+      5px 5px 1px var(--gray),
+      7px 7px 1px var(--light-gray),
+      9px 9px 1px var(--semi-gray),
+      11px 11px 1px var(--semi-white),
+      13px 13px 1px var(--white);
+    color: var(--black);
   }
   .common_title_right {
     display: none;
@@ -105,6 +132,7 @@
   }
   .profile_title h1 {
     font-size: 2rem;
+    font-weight: 900;
   }
   .profile_title h3 {
     font-size: 0.6rem;
@@ -327,6 +355,235 @@
     top: 1350px;
     left: 0;
   }
+  /* Project Modal */
+  /* Project Modal ONE */
+  .modal_logo_rect1 {
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  .modal_logo_rect2 {
+    left: 30px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .modal_one_project {
+    font-size: 1.5rem;
+    top: -20px;
+    left: 80px;
+  }
+  .close_btn_one i {
+    font-size: 2rem;
+    top: 30px;
+    right: 20px;
+  }
+  .first_modal_wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .first_modal_top {
+    left: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  .first_modal_top_introduce {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .first_modal_top_introduce h1 {
+    margin: 40px auto;
+    font-size: 2rem;
+  }
+  .first_modal_top_introduce li {
+    font-size: 0.9rem;
+    margin: 15px;
+  }
+  .first_modal_top_introduce li a {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 90px;
+  }
+  .first_modal_top_slider {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    border: none;
+  }
+  .first_modal_top_slider::after {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: -20px;
+  }
+  .first_modal_bottom {
+    width: 100%;
+    height: 40%;
+    left: 0;
+  }
+  .first_modal_bottom p {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+  .first_modal_bottom::before {
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+  .first_modal_bottom::after {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+  }
+  /* Project Modal TWO */
+  .modal_two_project {
+    font-size: 1.5rem;
+    top: -20px;
+    left: 80px;
+  }
+  .close_btn_two i {
+    font-size: 2rem;
+    top: 30px;
+    right: 20px;
+  }
+  .second_modal_wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .second_modal_top {
+    left: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  .second_modal_top_introduce {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .second_modal_top_introduce h1 {
+    margin: 40px auto;
+    font-size: 2rem;
+  }
+  .second_modal_top_introduce li {
+    font-size: 0.9rem;
+    margin: 15px;
+  }
+  .second_modal_top_introduce li a {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 90px;
+  }
+  .second_modal_top_slider {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    border: none;
+  }
+  .second_modal_top_slider::after {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: -20px;
+  }
+  .second_modal_bottom {
+    width: 100%;
+    height: 40%;
+    left: 0;
+  }
+  .second_modal_bottom p {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+  .second_modal_bottom::before {
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+  .second_modal_bottom::after {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+  }
+  /* Project Modal THREE */
+  .modal_three_project {
+    font-size: 1.5rem;
+    top: -20px;
+    left: 80px;
+  }
+  .close_btn_three i {
+    font-size: 2rem;
+    top: 30px;
+    right: 20px;
+  }
+  .third_modal_wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .third_modal_top {
+    left: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  .third_modal_top_introduce {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .third_modal_top_introduce h1 {
+    margin: 40px auto;
+    font-size: 2rem;
+  }
+  .third_modal_top_introduce li {
+    font-size: 0.9rem;
+    margin: 15px;
+  }
+  .third_modal_top_introduce li a {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 90px;
+  }
+  .third_modal_top_slider {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    border: none;
+  }
+  .third_modal_top_slider::after {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: -20px;
+  }
+  .third_modal_bottom {
+    width: 100%;
+    height: 40%;
+    left: 0;
+  }
+  .third_modal_bottom p {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+  .third_modal_bottom::before {
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+  .third_modal_bottom::after {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+  }
   /* Contact */
   .contact_wrap {
     width: 100%;
@@ -377,12 +634,6 @@
     font-size: 0.8rem;
     
   }
-  
-
-
-
-
-
   .contact_footer {
     width: 100%;
     height: 15%;

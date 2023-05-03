@@ -5,7 +5,7 @@
   align-items: center;
   margin-bottom: 30px;
   color: var(--gray);
-  text-shadow: 5px 5px 0 var(--light-gray);
+  text-shadow: 7px 7px 0 var(--light-gray);
 }
 .common_title_left {
   width: 35%;

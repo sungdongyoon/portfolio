@@ -28,6 +28,7 @@ dayNight.addEventListener("click", () => {
   const contactContent = document.querySelector(".contact_content");
   const aboutContent = document.querySelector(".about_content");
   const profileWrap = document.querySelector(".profile_wrap");
+  const homeH1 = document.querySelector(".content_title h1");
 
   header.classList.toggle("day_night_active");
   home.classList.toggle("day_night_active");
@@ -40,6 +41,7 @@ dayNight.addEventListener("click", () => {
   contactContent.classList.toggle("backgroundBlack");
   aboutContent.classList.toggle("backgroundBlack");
   profileWrap.classList.toggle("colorWhite");
+  homeH1.classList.toggle("day_night_active")
 
   const commonTitle = document.querySelectorAll(".common_title");
   for(let i = 0; i < commonTitle.length; i++) {
